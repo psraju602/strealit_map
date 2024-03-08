@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import time
+import plotly.express as px
 
 # Create a container to hold the map
 map_container = st.empty()
@@ -19,13 +20,24 @@ for seconds in range(200):
     
         fig_col1= st.columns(1)
         with fig_col1:
-          st.markdown("### First Chart")
-           # Update the content of the container with the map
-          st.map(df,
+            '''
+            data = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminder_with_codes.csv')
+ 
+            fig = px.choropleth(data, locations='iso_alpha', color='gdpPercap', hover_name='country',
+                                projection='natural earth', title='GDP per Capita by Country')
+            st.write(fig)
+            '''
+            st.markdown("### First Chart")
+            # Update the content of the container with the map
+            fig = map(df,
               latitude='col1',
               longitude='col2',
               size='col3',
               color='col4')
+            st.write(fig)
+            
+             
+ 
         time.sleep(1)
         
     
