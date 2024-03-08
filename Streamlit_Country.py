@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 i=1
-while i<=100:
+while i<=10:
     df = pd.DataFrame({
         "col1": np.random.randn(1000) / 50 + 37.76,
         "col2": np.random.randn(1000) / 50 + -122.4,
