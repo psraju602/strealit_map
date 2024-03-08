@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-
-while True:
+i=1
+while i<=100:
     df = pd.DataFrame({
         "col1": np.random.randn(1000) / 50 + 37.76,
         "col2": np.random.randn(1000) / 50 + -122.4,
@@ -17,3 +17,4 @@ while True:
         longitude='col2',
         size='col3',
         color='col4')
+    i = i+1
