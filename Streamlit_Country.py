@@ -3,6 +3,9 @@ import pandas as pd
 import numpy as np
 import time
 
+# Create a container to hold the map
+map_container = st.empty()
+
 for seconds in range(200):
 
     df = pd.DataFrame({
@@ -12,10 +15,11 @@ for seconds in range(200):
         "col4": np.random.rand(1000, 4).tolist()
     })
     
-    
-    st.map(df,
+    # Update the content of the container with the map
+    map_container.map(df,
         latitude='col1',
         longitude='col2',
         size='col3',
         color='col4')
+    
     time.sleep(3)
