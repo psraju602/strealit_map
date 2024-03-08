@@ -18,4 +18,4 @@ for seconds in range(200):
         longitude='col2',
         size='col3',
         color='col4')
-time.sleep(1)
+    time.sleep(3)
