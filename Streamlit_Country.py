@@ -7,7 +7,7 @@ import time
 map_container = st.empty()
 
 for seconds in range(200):
-    with placeholder.container():
+    with map_container.container():
         
 
         df = pd.DataFrame({
@@ -18,7 +18,7 @@ for seconds in range(200):
         })
         
         # Update the content of the container with the map
-        map_container.map(df,
+        st.map(df,
             latitude='col1',
             longitude='col2',
             size='col3',
