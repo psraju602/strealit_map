@@ -1,3 +1,8 @@
+import streamlit as st
+import pandas as pd
+import numpy as np
+
+
 
 df = pd.DataFrame({
     "col1": np.random.randn(1000) / 50 + 37.76,
